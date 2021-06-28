@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsnow_flags>
+  <below>1</below>
+  <blowofffactor>100</blowofffactor>
+  <cpuload>100</cpuload>
+  <desired_number_of_trees>10</desired_number_of_trees>
+  <exposures>0</exposures>
+  <flakecountmax>10000</flakecountmax>
+  <fullscreen>1</fullscreen>
+  <KDEbg>0</KDEbg>
+  <maxontrees>200</maxontrees>
+  <MaxScrSnowDepth>50</MaxScrSnowDepth>
+  <MaxWinSnowDepth>30</MaxWinSnowDepth>
+  <NoBlowSnow>0</NoBlowSnow>
+  <NoFluffy>0</NoFluffy>
+  <NoKeepSBot>0</NoKeepSBot>
+  <NoKeepSnow>0</NoKeepSnow>
+  <NoKeepSnowOnTrees>0</NoKeepSnowOnTrees>
+  <NoKeepSWin>0</NoKeepSWin>
+  <NoMeteorites>0</NoMeteorites>
+  <NoRudolf>0</NoRudolf>
+  <NoSanta>0</NoSanta>
+  <NoSnowFlakes>0</NoSnowFlakes>
+  <NoTrees>0</NoTrees>
+  <NoWind>0</NoWind>
+  <nstars>20</nstars>
+  <offset_s>0</offset_s>
+  <offset_w>-8</offset_w>
+  <offset_x>4</offset_x>
+  <offset_y>0</offset_y>
+  <quiet>1</quiet>
+  <SantaSize>3</SantaSize>
+  <SantaSpeedFactor>100</SantaSpeedFactor>
+  <snowflakesfactor>100</snowflakesfactor>
+  <SnowSpeedFactor>100</SnowSpeedFactor>
+  <treefill>30</treefill>
+  <usealpha>0</usealpha>
+  <usebg>0</usebg>
+  <WhirlFactor>100</WhirlFactor>
+  <WindTimer>30</WindTimer>
+  <bgcolor>#000000</bgcolor>
+  <display_name/>
+  <snowColor>snow</snowColor>
+  <trColor>chartreuse</trColor>
+  <TreeType>1,2,3,4,5,6,</TreeType>
+</xsnow_flags>

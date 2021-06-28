@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+exec "i3-nagbar -t warning -m 'This will end your X session.' -B 'Yes' 'i3-save-tree --output=~/.i3/workspace.json && i3-msg exit'"

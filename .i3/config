@@ -1,0 +1,189 @@
+#font pango:monospace 10
+#font pango:FiraCode NF 11
+font pango:Fixedsys Excelsior 3.01 Regular 12
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/workspace.json'"
+
+
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+
+set $up l
+set $down k
+set $left j
+set $right semicolon
+
+set $mod Mod1
+
+floating_modifier $mod
+
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec nautilus
+bindsym $mod+Shift+f exec firefox
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Tab exec --no-startup-id rofi -show windowcd
+bindsym $mod+Shift+Tab exec --no-startup-id rofi -show window
+
+# joke
+bindsym $mod+b exec --no-startup-id blackhole
+
+# timetable
+bindsym $mod+t exec --no-startup-id xdg-open '/home/bhuvan/Downloads/Grade XI  science Timetable 2021-22-Sectionwise.pdf'
+
+bindsym $mod+Shift+t bar mode toggle
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Ctrl+l exec i3lock -t -i '/home/bhuvan/Pictures/Wallpapers/001.png' 
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+for_window [class=".*"] border pixel 1
+for_window [class="gnome-terminal-server"] title_format "i3-sensible-terminal: %title"
+for_window [class="voidf"] sticky enable
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'This will end your X session.' -B 'Yes' 'i3-msg exit'"
+
+
+set $resizeSize 5
+mode "resize" {
+        bindsym $left       resize shrink width $resizeSize px or $resizeSize ppt
+        bindsym $down       resize grow height $resizeSize px or $resizeSize ppt
+        bindsym $up         resize shrink height $resizeSize px or $resizeSize ppt
+        bindsym $right      resize grow width $resizeSize px or $resizeSize ppt
+
+        bindsym Left        resize shrink width $resizeSize px or $resizeSize ppt
+        bindsym Down        resize grow height $resizeSize px or $resizeSize ppt
+        bindsym Up          resize shrink height $resizeSize px or $resizeSize ppt
+        bindsym Right       resize grow width $resizeSize px or $resizeSize ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+gaps inner 10
+
+set $moveSize 10
+mode "move" {
+        bindsym $left       move left $moveSize px 
+        bindsym $down       move down $moveSize px
+        bindsym $up         move up $moveSize px 
+        bindsym $right      move right $moveSize px
+
+        bindsym Left        move left $moveSize px 
+        bindsym Down        move down $moveSize px
+        bindsym Up          move up $moveSize px 
+        bindsym Right       move right $moveSize px
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+m mode "default"
+}
+
+bindsym $mod+r mode "resize"
+bindsym $mod+m mode "move"
+
+#gaps inner 10
+#gaps outer 20
+
+#                         border  background text    indicator
+#client.focused            #5d804d #4d7f99 #5c5766 #19161a
+#client.focused_inactive   #2d4d26 #394c73 #828499 #19161a
+#client.unfocused          #b3955a #383159 #828499 #19161a
+#client.urgent             #995c3d #995c3d #992e2e #19161a
+
+bar {
+    status_command i3blocks -c ~/.i3/i3blocks.conf
+    tray_padding 5 px
+}
+
+
+# screenshot
+bindsym Print exec gnome-screenshot
+bindsym Ctrl+Print exec gnome-screenshot -c
+bindsym Shift+Ctrl+Print exec gnome-screenshot -a -c
+bindsym Shift+Print exec gnome-screenshot -a
+
+# boomer
+bindsym Ctrl+Shift+Z exec bash -c "~/.bin/boomer"
+
+exec i3-config-wizard
+
+# wallpaper
+#exec_always feh --bg-scale '/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024.png'
+exec_always feh --bg-fill --xinerama-index 0 ~/Pictures/Wallpapers/blank.png -B "#71323c"
+exec_always compton --config ~/.i3/compton.conf
+# exec_always feh --bg-scale ~/Pictures/Wallpapers/76868567_p0_master1200.jpg
+# exec teams
