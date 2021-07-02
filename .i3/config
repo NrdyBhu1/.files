@@ -18,7 +18,7 @@ set $down k
 set $left j
 set $right semicolon
 
-set $mod Mod1
+set $mod Mod4 
 
 floating_modifier $mod
 
@@ -34,11 +34,12 @@ bindsym $mod+Shift+Tab exec --no-startup-id rofi -show window
 
 # joke
 bindsym $mod+b exec --no-startup-id blackhole
+bindsym $mod+n exec --no-startup-id ~/.bin/set_rbg 
 
 # timetable
 bindsym $mod+t exec --no-startup-id xdg-open '/home/bhuvan/Downloads/Grade XI  science Timetable 2021-22-Sectionwise.pdf'
 
-bindsym $mod+Shift+t bar mode toggle
+#bindsym $mod+Shift+t bar mode toggle
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up

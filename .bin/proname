@@ -1,18 +1,26 @@
 #!/usr/bin/python3
-from random import randint, choice
+from random import choice
 
-the_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#the_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#for i in range(65, 90):
+#    the_list.append(chr(i))
+#for i in range(97, 122):
+#    the_list.append(chr(i))
+#nofc = randint(3, 7)
+#proname = ""
+#for i in range(nofc):
+#    proname += str(choice(the_list))
 
-for i in range(65, 90):
-    the_list.append(chr(i))
+cs = "BCDFGHJKLMNPQRSTVWXZY"
+vs = "AEIOU"
 
-for i in range(97, 122):
-    the_list.append(chr(i))
+def generate_name(n=3):
+    result = ""
+    for i in range(n):
+        result += choice(cs)
+        result += choice(vs)
+    return result
 
-nofc = randint(3, 7)
-proname = ""
-for i in range(nofc):
-    proname += str(choice(the_list))
-
-print(proname)
+if __name__ == "__main__":
+    print(generate_name())
 

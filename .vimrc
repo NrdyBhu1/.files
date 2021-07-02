@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'Zenburn'
 Plugin 'j-tom/vim-old-hope'
+Plugin 'jreybert/vimagit'
 Plugin 'aserebryakov/vim-todo-lists'
 Plugin 'vim-crystal/vim-crystal'
 Plugin 'ziglang/zig.vim'
@@ -73,7 +74,8 @@ vmap <Down> <nop>
 vmap <Left> <nop>
 vmap <Right> <nop>
 
-set guifont="FiraCode NF ":h13
+set guifont=FiraCode\ NF\ 13
+" set guifont=Fixedsys\ Excelsior\ 3.01\ Regular\ 13
 let g:python3_host_prog='/usr/bin/python3'
 
 syntax on
