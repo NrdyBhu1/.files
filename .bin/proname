@@ -11,13 +11,16 @@ from random import choice
 #for i in range(nofc):
 #    proname += str(choice(the_list))
 
-cs = "BCDFGHJKLMNPQRSTVWXZY"
-vs = "AEIOU"
+cs = "bcdfghjklmnpqrstvwxzy"
+vs = "aeiou"
 
 def generate_name(n=3):
     result = ""
     for i in range(n):
-        result += choice(cs)
+        if i == 0:
+            result += choice(cs.upper())
+        else:
+            result += choice(cs)
         result += choice(vs)
     return result
 

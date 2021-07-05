@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+toggle_florp | grep -E '^[[:digit:]]* [[:digit:]]* [[:digit:]]*'

@@ -1,0 +1,83 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/bhuvan/Programming/nrdybhu1/" . "frontend/")
+ ("/home/bhuvan/Programming/" . "nrdybhu1/")
+ ("/home/bhuvan/" . "Programming/")
+ ("/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/" . "user_input_2/")
+ ("/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/" . "_includes/")
+ ("/home/" . "bhuvan/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/bhuvan/Programming/nrdybhu1/frontend/"
+ "/home/bhuvan/Programming/nrdybhu1/backend/"
+ "/home/bhuvan/Programming/nrdybhu1/teeny-tin/"
+ "/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/jumps_and_compares_3/"
+ "/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/user_input_2/"
+ "/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/"
+ "/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/"
+ "/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/hello_world_1/"
+ "/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/_includes/"
+ "/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/_layouts/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "facts.json"
+ ".gitignore"
+ "data.json"
+ "wsgi.py"
+ "requirements.txt"
+ "Procfile"
+ "main.py"
+ "README.md"
+ "Makefile"
+ "user_input.asm"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/bhuvan/Programming/nrdybhu1/frontend/" (24802 41201 77411 955000) "README.md" "components/" "node_modules/" "../" "package-lock.json" "./" "public/" ".next/" "package.json" "styles/" "pages/" ".gitignore" ".git/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/" (24802 40686 648893 574000) "libel37n/" "cj8-qualifier/" "opengl-crash-course/" "The2020CoderBot/" "ntb/" "image2c/" "deIG/" "Untitled Folder/" "Bogodron/" "install-glfw-deps.bat" "proname/" "untitled-game-jam/" "Aaaa/" "tictactoec/" "install-glfw-deps.sh" "Untitled Game Jam/" "LICENSE" "moe/" "culf/" "motionless-plantation-website/" "zig-game/" "../" "Dope/" "icy-lisp-lettuce/" "reed-bot/" "./" "lesssgoooo/" "backend/" "pygame-extras/" "Fp24/" "wwf-jr.github.io/" "QhQ/" "lyAN/" "zig-hello-world/" "uxu/" "WDY/" "noms/" "LessGoo/" "dr4/" "mC9I/" "Tic-Tac-Toe-Cpp/" "COGE/" "teeny-tin/" "Grimblaze/" "bleh/" "sakamoto-algo-implementation/" "urlon/" "uwuxator/" "fi1oopl/" "hello_world/" "frontend/" "NrdyBhu1/" "oq3/" "zo-bot/" "What-A-Jam-Game!/" "dbotpy/" "taskell-hello-world/" "Zeno-Game-Jam/" "thejiveproject/" "jekyllthemes/" "t0u/" "learning-assembly-lang/" "latut/" "curgame/" "raylib-game-template/" "enter/" "bash_examples/" "macroquad/" ".ipynb_checkpoints/" "prime-numbers-counter/" "atlas-jekyll-theme/" "Mini-RPG/" "wwf-jr-contact/" "main" "five-programming-problems/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/backend/" (24802 43453 627503 481000) "README.md" "main.py" "LICENSE" "../" "./" "wsgi.py" "Procfile" ".gitignore" ".git/" ".gitattributes" "lib.py" "requirements.txt" ".gitattributes~" "__pycache__/" "data.json" ".env")
+
+ ("/home/bhuvan/Programming/nrdybhu1/wwf-jr-contact/" (24800 18629 721626 205000) "main.py" "LICENSE" "../" "./" "wsgi.py" ".git/" "requirements.txt" "__pycache__/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/teeny-tin/" (24800 6107 201988 65000) "README.md" "LICENSE" "../" "./" "Cargo.lock" ".gitignore" "target/" "Cargo.toml" ".git/" "src/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/" (24798 51235 211827 419000) "README.md" "LICENSE" "../" "./" ".gitignore" "user_input_2/" ".git/" "jumps_and_compares_3/" "hello_world_1/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/jumps_and_compares_3/" (24798 51843 681585 483000) "jumps_and_compares" "../" "./" "jumps_and_compares.asm~" "Makefile" "jumps_and_compares.asm")
+
+ ("/home/bhuvan/Programming/" (24798 58073 422685 147000) "playground/" "../" "nrdybhu1/" "./" "org.gnome.Shell.Notifications.service" "thirdparty/")
+
+ ("/home/bhuvan/" (24798 60761 944146 367000) ".python_history" ".nimble/" "games/" "VirtualBox VMs/" "snake.sh" ".rustup/" ".pki/" ".bash_profile" "Among-Us-v2021.3.5s_www.FreeGamesDL.net/" "PlayOnLinux's virtual drives/" ".pylint.d/" ".gtkrc-2.0" "dlang/" "Programming/" "LICENSE" "Godot_v3.3-stable_x11.64" ".atom/" ".zsh_history" ".npm/" ".emacs" ".mozilla/" "tor-browser_en-US/" "node_modules/" ".cargo/" ".pythonhist" ".vscode/" ".vscode-oss/" "../" ".laterc" "package-lock.json" "packages-microsoft-prod.deb" "Pictures/" "./" ".nuget/" ".config/" ".librewolf/" ".bin/" ".wget-hsts" ".wine/" ".templateengine/" ".w3m/" ".pomo/" "Music/" "colorscheme" "Minecraft.v1.16.1.Incl.Multiplayer/" ".wallpapers/" ".dotnet/" "snap/" ".idlerc/" "vlc skins/" ".steampath" ".keras/" ".dub/" ".xsnowrc" "homework" ".gem/" ".profile" ".Xresources" ".steampid" ".cus_bsh" ".vimrc" "todo.md" "Public/" ".files/" ".java/" ".steam/" ".zshrc" ".bash_history" ".thunderbird/" ".i3/" ".fehbg" ".zcompdump" "Desktop/" "balenaEtcher-1.5.116-x64.AppImage" "Aseprite/" ".zcompdump-nrdybhu1-5.8" ".icons/" ".emacs~" ".jupyter/" ".gnupg/" ".vim/" "he" ".ssh/" ".bash_logout" ".xsession" ".local/" ".mednafen/" ".oh-my-zsh/" "zls/" "Documents/" "Aseprite-v1.2.25-Source/" ".xscreensaver" ".pylintrc" ".git-credentials" ".ballz_saves.txt" ".shell.pre-oh-my-zsh" "Portal_www.FreeGamesDL.net/" "Downloads/" ".bashrc" ".sqlite_history" "Videos/" "Templates/" "DNM/" "LibreWolf.AppImage" ".node_repl_history" "nltk_data/" "Programming Posts/" ".sudo_as_admin_successful" ".gitconfig" "font-awesome/" ".bundle/" ".PlayOnLinux/" ".cache/" ".viminfo" ".lesshst" "Projects/" ".gconf/" ".kball/" ".ipython/" "Study/" ".netrc" ".fonts/" ".emacs.d/")
+
+ ("/home/bhuvan/Programming/nrdybhu1/teeny-tin/src/" (24798 62312 462786 511000) "main.rs" "../" "./" "main.rs~")
+
+ ("/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/hello_world_1/" (24797 26537 715182 314000) "../" "./" "Makefile" "hello_world" "hello_world.asm" "hello_world.o")
+
+ ("/home/bhuvan/Programming/nrdybhu1/learning-assembly-lang/user_input_2/" (24797 26566 855902 509000) "user_input.asm" "../" "./" "Makefile" "user_input" "user_input.o")
+
+ ("/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/" (24796 16363 169170 289000) "Gemfile.lock" "index.md" "../" "./" "feed.xml" "Gemfile" "img/" ".sass-cache/" ".gitignore" "_sass/" "_layouts/" "_includes/" "_config.yml" "css/" "_site/" "about.md~" "_posts/" "about.md" "_config.yml~" "404.html")
+
+ ("/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/_includes/" (24796 16315 204160 626000) "../" "./" "footer.html" "header.html" "footer.html~" "sidebar.html" "header.html~")
+
+ ("/home/bhuvan/Programming/nrdybhu1/motionless-plantation-website/_layouts/" (24796 12660 96588 612000) "page.html" "../" "./" "page.html~")
+
+ ("/home/" (24656 28827 587918 530000) "../" "./" "linuxbrew/" "bhuvan/")
+
+ ("/home/bhuvan/.emacs.d/" (24796 10281 365528 857000) "auto-save-list/" "../" "./" "elpa/")
+
+ ("/home/bhuvan/.emacs.d/elpa/" (24796 10309 885935 82000) "../" "./" "polymode-20210521.1131/" "jekyll-modes-20141117.1314/" "archives/" "gnupg/")
+
+ ("/home/bhuvan/.emacs.d/elpa/jekyll-modes-20141117.1314/" (24796 10310 141938 731000) "jekyll-modes.el" "jekyll-modes-autoloads.el" "../" "./" "jekyll-modes-pkg.el")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
