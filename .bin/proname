@@ -17,10 +17,7 @@ vs = "aeiou"
 def generate_name(n=3):
     result = ""
     for i in range(n):
-        if i == 0:
-            result += choice(cs.upper())
-        else:
-            result += choice(cs)
+        result += choice(cs)
         result += choice(vs)
     return result
 

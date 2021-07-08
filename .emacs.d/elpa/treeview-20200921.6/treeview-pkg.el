@@ -1,2 +1,0 @@
-;;; Generated package description from treeview.el  -*- no-byte-compile: t -*-
-(define-package "treeview" "20200921.6" "A generic tree navigation library" '((emacs "24.4")) :commit "e6012303670d112596e00eb3cb505eb0e0d61d84" :authors '(("Tilman Rassy" . "tilman.rassy@googlemail.com")) :maintainer '("Tilman Rassy" . "tilman.rassy@googlemail.com") :keywords '("lisp" "tools" "internal" "convenience") :url "https://github.com/tilmanrassy/emacs-treeview")

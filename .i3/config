@@ -134,7 +134,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-gaps inner 10
+gaps inner 20
 
 set $moveSize 10
 mode "move" {
@@ -180,11 +180,16 @@ bindsym Shift+Print exec gnome-screenshot -a
 # boomer
 bindsym Ctrl+Shift+Z exec bash -c "~/.bin/boomer"
 
+focus_follows_mouse no
+
+hide_edge_borders both
+
+
 exec i3-config-wizard
 
 # wallpaper
 #exec_always feh --bg-scale '/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024.png'
-exec_always feh --bg-fill --xinerama-index 0 ~/Pictures/Wallpapers/blank.png -B "#71323c"
+exec_always ~/.bin/set_rbg
 exec_always compton --config ~/.i3/compton.conf
 # exec_always feh --bg-scale ~/Pictures/Wallpapers/76868567_p0_master1200.jpg
 # exec teams
