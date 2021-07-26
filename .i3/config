@@ -1,6 +1,6 @@
-#font pango:monospace 10
+font pango:monospace 10
 #font pango:FiraCode NF 11
-font pango:Fixedsys Excelsior 3.01 Regular 12
+#font pango:Fixedsys Excelsior 3.01 Regular 12
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 # exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/workspace.json'"
@@ -12,28 +12,22 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+set $mod Mod4
+
 
 set $up l
 set $down k
 set $left j
 set $right semicolon
 
-set $mod Mod4 
-
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Return exec nautilus
-bindsym $mod+Shift+f exec firefox
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+Tab exec --no-startup-id rofi -show windowcd
-bindsym $mod+Shift+Tab exec --no-startup-id rofi -show window
-
-# joke
-bindsym $mod+b exec --no-startup-id blackhole
+bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+n exec --no-startup-id ~/.bin/set_rbg 
 
 # timetable
@@ -70,6 +64,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Ctrl+l exec i3lock -t -i '/home/bhuvan/Pictures/Wallpapers/001.png' 
+bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 bindsym $mod+Shift+minus move scratchpad
@@ -108,8 +103,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-for_window [class=".*"] border pixel 1
-for_window [class="gnome-terminal-server"] title_format "i3-sensible-terminal: %title"
+# for_window [class=".*"] border pixel 1
+for_window [class="gnome-terminal-server"] title_format "i3-sensible-terminal"
 for_window [class="voidf"] sticky enable
 
 bindsym $mod+Shift+c reload
@@ -156,18 +151,28 @@ mode "move" {
 bindsym $mod+r mode "resize"
 bindsym $mod+m mode "move"
 
-#gaps inner 10
-#gaps outer 20
+set $bg-color            #191c21
+set $inactive-bg-color   #191c21
+set $text-color          #979CAC
+set $inactive-text-color #3e4451
+set $urgent-bg-color     #E53935
 
-#                         border  background text    indicator
-#client.focused            #5d804d #4d7f99 #5c5766 #19161a
-#client.focused_inactive   #2d4d26 #394c73 #828499 #19161a
-#client.unfocused          #b3955a #383159 #828499 #19161a
-#client.urgent             #995c3d #995c3d #992e2e #19161a
+# window colors
+# #                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 bar {
     status_command i3blocks -c ~/.i3/i3blocks.conf
     tray_padding 5 px
+    position top
+    colors {
+        focused_workspace          $bg-color           $bg-color          $text-color
+        inactive_workspace         $inactive-bg-color  $inactive-bg-color $inactive-text-color
+        urgent_workspace           $urgent-bg-color    $urgent-bg-color   $text-color
+    }
 }
 
 
@@ -178,18 +183,15 @@ bindsym Shift+Ctrl+Print exec gnome-screenshot -a -c
 bindsym Shift+Print exec gnome-screenshot -a
 
 # boomer
-bindsym Ctrl+Shift+Z exec bash -c "~/.bin/boomer"
-
+bindsym Ctrl+Shift+B exec bash -c "~/.bin/boomer"
 focus_follows_mouse no
-
 hide_edge_borders both
-
-
 exec i3-config-wizard
 
 # wallpaper
 #exec_always feh --bg-scale '/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_768x1024.png'
-exec_always ~/.bin/set_rbg
-exec_always compton --config ~/.i3/compton.conf
+# exec_always ~/.bin/set_rbg
+exec_always feh --bg-scale ~/Pictures/Wallpapers/external-content.duckduckgo.com.png
+exec_always picom --config ~/.i3/compton.conf 
 # exec_always feh --bg-scale ~/Pictures/Wallpapers/76868567_p0_master1200.jpg
 # exec teams
