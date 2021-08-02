@@ -129,7 +129,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-gaps inner 20
+# gaps inner 15
 
 set $moveSize 10
 mode "move" {
@@ -151,28 +151,29 @@ mode "move" {
 bindsym $mod+r mode "resize"
 bindsym $mod+m mode "move"
 
-set $bg-color            #191c21
-set $inactive-bg-color   #191c21
-set $text-color          #979CAC
-set $inactive-text-color #3e4451
-set $urgent-bg-color     #E53935
+# set $bg-color            #191c21
+# set $inactive-bg-color   #191c21
+# set $text-color          #979CAC
+# set $inactive-text-color #3e4451
+# set $urgent-bg-color     #E53935
 
 # window colors
 # #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+# client.focused          $bg-color           $bg-color          $text-color          #00ff00
+# client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+# client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+# client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 bar {
     status_command i3blocks -c ~/.i3/i3blocks.conf
     tray_padding 5 px
     position top
-    colors {
-        focused_workspace          $bg-color           $bg-color          $text-color
-        inactive_workspace         $inactive-bg-color  $inactive-bg-color $inactive-text-color
-        urgent_workspace           $urgent-bg-color    $urgent-bg-color   $text-color
-    }
+    bindsym button3 exec --no-startup-id jgmenu_run
+    # colors {
+    #     focused_workspace          $bg-color           $bg-color          $text-color
+    #     inactive_workspace         $inactive-bg-color  $inactive-bg-color $inactive-text-color
+    #     urgent_workspace           $urgent-bg-color    $urgent-bg-color   $text-color
+    # }
 }
 
 
