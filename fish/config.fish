@@ -11,6 +11,8 @@ set PATH "$HOME/.bin:$HOME/.emacs.d/bin:$HOME/tor-browser_en-US/:$HOME/Programmi
 alias ls='lsd'
 alias cat='bat --theme OneHalfDark'
 alias tmux='tmux -u'
+alias vi='neovide'
 source ("/usr/local/bin/starship" init fish --print-full-init | psub)
 set STARSHIP_CONFIG "$HOME\.starship\config.toml"
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/bhuvan/.ghcup/bin $PATH # ghcup-env
+curl https://icanhazdadjoke.com/

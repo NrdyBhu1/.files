@@ -244,6 +244,9 @@ awful.screen.connect_for_each_screen(function(s)
             mytextclock,
             battery_widget(),
             volume_widget(),
+            volume_widget{
+                widget_type = 'arc'
+            },
             mic({
                 timeout = 10,
                 settings = function(self)
@@ -256,9 +259,6 @@ awful.screen.connect_for_each_screen(function(s)
             }),
             fs_widget(), --default
             -- customized
-            volume_widget{
-                widget_type = 'arc'
-            },
             s.mylayoutbox,
         }
     }
@@ -310,6 +310,11 @@ globalkeys = gears.table.join(
        awful.util.spawn("amixer set Master 9%-") end),
    awful.key({ }, "XF86AudioMute", function ()
        awful.util.spawn("amixer sset Master toggle") end),
+
+    awful.key({ }, "Print", function() 
+       awful.util.spawn("gnome-screenshot") end),
+    awful.key({ "Control", "Shift" }, "Print", function() 
+       awful.util.spawn("flameshot gui") end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
