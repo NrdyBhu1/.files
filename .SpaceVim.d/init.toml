@@ -9,7 +9,7 @@
 # All SpaceVim option below [option] section
 [options]
 
-    colorscheme = "hybrid"
+    colorscheme = "onedark"
     colorscheme_bg = "dark"
     enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
