@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-BG_COLOR="$(~/.bin/random_rgb)"
-BG_COLOR="$(~/.bin/num_to_hex $BG_COLOR)"
-#echo $BG_COLOR
-feh --bg-fill --xinerama-index 0 ~/Pictures/Wallpapers/blank.png -B "$BG_COLOR"
-
